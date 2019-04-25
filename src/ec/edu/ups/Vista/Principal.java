@@ -92,7 +92,7 @@ public class Principal {
                                 System.out.println(controladorloro.read(cod));
                                 break;
                             case 3:
-                                System.out.println("Ingrese el codigo del profesional");
+                                System.out.println("Ingrese el codigo del loro");
                                 cod = l.nextInt();
                                 if (controladorloro.read(cod) != null) {
                                     System.out.println("Ingrese un nombre:");
@@ -183,12 +183,12 @@ public class Principal {
 
                                 break;
                             case 2:
-                                System.out.println("Ingrese el codigo del no profesional");
+                                System.out.println("Ingrese el codigo del pato");
                                 int cod1 = l.nextInt();
                                 System.out.println(controladorpato.read(cod1));
                                 break;
                             case 3:
-                                System.out.println("Ingrese el codigo del no profesional");
+                                System.out.println("Ingrese el codigo del pato");
                                 cod1 = l.nextInt();
                                 if (controladorpato.read(cod1) != null) {
                                     System.out.println("Ingrese el nombre:");
@@ -220,11 +220,11 @@ public class Principal {
                                 
                                     controladorpato.update(objeto);
                                 } else {
-                                    System.out.println("El no profesional no existe");
+                                    System.out.println("El pato no existe");
                                 }
                                 break;
                             case 4:
-                                System.out.println("Ingrese el codigo del no profesional que va a eliminar");
+                                System.out.println("Ingrese el codigo del pato  que va a eliminar");
                                 cod1 = l.nextInt();
                                 controladorpato.delete(cod1);
                                 break;
@@ -241,7 +241,7 @@ public class Principal {
                 case 3:
                     boolean repbuitre = true;
                     do {
-                        System.out.println("MENU PATO");
+                        System.out.println("MENU BUITRE");
                         System.out.println("1. Create");
                         System.out.println("2. Read");
                         System.out.println("3. Update");
@@ -273,12 +273,12 @@ public class Principal {
                                 controladorbuitre.create(objeto);
                                 break;
                             case 2:
-                                System.out.println("Ingrese el codigo del lactante");
+                                System.out.println("Ingrese el codigo del buitre");
                                 int cod2 = l.nextInt();
                                 System.out.println(controladorbuitre.read(cod2));
                                 break;
                             case 3:
-                                System.out.println("Ingrese el codigo del lactante");
+                                System.out.println("Ingrese el codigo del buitre");
                                 cod2 = l.nextInt();
                                 if (controladorbuitre.read(cod2) != null) {
                                      System.out.println("Ingrese el nombre:");
@@ -301,14 +301,13 @@ public class Principal {
                                 depredador=l.next();
                                  objeto = new Buitre(Carnivoro, simbolo, cueva, depredador, codigo, peso, nombre, fechaN, edad);
                                  objeto.setCodigo(cod2);
-                                   
-                                    controladorbuitre.update(objeto);
+                                 controladorbuitre.update(objeto);
                                 } else {
-                                    System.out.println("El lactante no existe");
+                                    System.out.println("El buitre no existe");
                                 }
                                 break;
                             case 4:
-                                System.out.println("Ingrese el codigo del lactante que va a eliminar");
+                                System.out.println("Ingrese el codigo del buitre que va a eliminar");
                                 cod2 = l.nextInt();
                                 controladorbuitre.delete(cod2);
                                 break;
@@ -323,92 +322,91 @@ public class Principal {
 
                     break;
                 case 4:
-                    boolean repetirPreadolescente = true;
+                    boolean replechuza = true;
                     do {
-                        System.out.println("Elija una opcion:\n1) Create\n2) Read\n3) Update\n4) Delete\n5) Listar\n6) Regresar");
-                        int opcionPreadolescente = escaner.nextInt();
-                        switch (opcionPreadolescente) {
+                        System.out.println("MENU Lechuza");
+                        System.out.println("1. Create");
+                        System.out.println("2. Read");
+                        System.out.println("3. Update");
+                        System.out.println("4. Delete");
+                        System.out.println("5. Regresar al menu principal");
+                        System.out.println("Selecciona una opción");
+                        int oplechuza = l.nextInt();
+                        switch (oplechuza) {
                             case 1:
-                                System.out.println("Ingrese un nombre:");
-                                String nombre = escaner.next();
-                                System.out.println("Ingrese año escolar:");
-                                int anio = escaner.nextInt();
-                                System.out.println("Ingrese calificacion escolar");
-                                int calificacion = escaner.nextInt();
-                                System.out.println("Ingrese si esta en bachillerato");
-                                boolean bachi = escaner.nextBoolean();
-                                System.out.println("Ingrese si esta en colegio publico");
-                                boolean publico = escaner.nextBoolean();
-                                System.out.println("Ingrese crecimiento de talla anual");
-                                int talla = escaner.nextInt();
-                                System.out.println("Es huerfano:");
-                                boolean huerfano = escaner.nextBoolean();
-                                System.out.println("Es vulnerable");
-                                boolean vulnerable = escaner.nextBoolean();
-                                System.out.println("Está en un orfanato:");
-                                boolean orfanato = escaner.nextBoolean();
-                                System.out.println("Fecha de nacimiento");
-                                Date miDate = new SimpleDateFormat("dd/MM/yyyy").parse(escaner.next());
-                                System.out.println("Sexo:");
-                                String sexo = escaner.next();
-                                System.out.println("Tipo de sangre:");
-                                String sangre = escaner.next();
-                                Preadolescente objeto = new Preadolescente(anio, calificacion, bachi, publico, talla, huerfano, vulnerable, orfanato, nombre, miDate, sexo, sangre);
-                                controladorPreadolescente.create(objeto);
+                                System.out.println("Ingrese el nombre:");
+                                String nombre = l.next();
+                                System.out.println("Ingrese el codigo:");
+                                int codigo = l.nextInt();
+                                System.out.println("Ingrese el peso:");
+                                String peso=l.next();
+                                System.out.println("Ingrese la edad:");
+                                int edad=l.nextInt();
+                                System.out.println("Ingresela fecha de nacimiento:");
+                                Date fechaN= new SimpleDateFormat("dd/MM/yyyy").parse(l.next());
+                                System.out.println("Que clase de animales come  siendo este tambien depredador");
+                                String depredador=l.next();
+                                System.out.println("Donde estan ubicada las cuevas de estos animales ");
+                                String cueva=l.next();
+                                System.out.println("ingrese el tiempo que pude estar en la luz del dia");
+                                String tiempo=l.next();
+                                System.out.println("Ingrese cual seria la forma de su cabeza");
+                                String fcabeza=l.next();
+                                System.out.println("Ingrese donde puede  hacer sus nidos ");
+                                String aujeros=l.next();
+                                Lechuza objeto = new Lechuza(nombre, aujeros, aujeros, cueva, depredador, codigo, peso, nombre, fechaN, edad);
+                                controladorlechuza.create(objeto);
                                 break;
                             case 2:
-                                System.out.println("Ingrese el codigo del preadolescente");
-                                int codigo2 = escaner.nextInt();
-                                System.out.println(controladorPreadolescente.read(codigo2));
+                                System.out.println("Ingrese el codigo de la lechuza");
+                                int cod3 = l.nextInt();
+                                System.out.println(controladorlechuza.read(cod3));
                                 break;
                             case 3:
-                                System.out.println("Ingrese el codigo del preadolescente");
-                                codigo2 = escaner.nextInt();
-                                if (controladorPreadolescente.read(codigo2) != null) {
-                                    System.out.println("Ingrese un nombre:");
-                                    nombre = escaner.next();
-                                    System.out.println("Ingrese año escolar:");
-                                    anio = escaner.nextInt();
-                                    System.out.println("Ingrese calificacion escolar");
-                                    calificacion = escaner.nextInt();
-                                    System.out.println("Ingrese si esta en bachillerato");
-                                    bachi = escaner.nextBoolean();
-                                    System.out.println("Ingrese si esta en colegio publico");
-                                    publico = escaner.nextBoolean();
-                                    System.out.println("Ingrese crecimiento de talla anual");
-                                    talla = escaner.nextInt();
-                                    System.out.println("Es huerfano:");
-                                    huerfano = escaner.nextBoolean();
-                                    System.out.println("Es vulnerable");
-                                    vulnerable = escaner.nextBoolean();
-                                    System.out.println("Está en un orfanato:");
-                                    orfanato = escaner.nextBoolean();
-                                    System.out.println("Fecha de nacimiento");
-                                    miDate = new SimpleDateFormat("dd/MM/yyyy").parse(escaner.next());
-                                    System.out.println("Sexo:");
-                                    sexo = escaner.next();
-                                    System.out.println("Tipo de sangre:");
-                                    sangre = escaner.next();
-                                    objeto = new Preadolescente(anio, calificacion, bachi, publico, talla, huerfano, vulnerable, orfanato, nombre, miDate, sexo, sangre);
-                                    objeto.setCodigo(codigo2);
-                                    controladorPreadolescente.update(objeto);
+                                System.out.println("Ingrese el codigo de la lechuza");
+                                cod3 = l.nextInt();
+                                if (controladorlechuza.read(cod3) != null) {
+                                    System.out.println("Ingrese el nombre:");
+                                    nombre = l.next();
+                                    System.out.println("Ingrese el codigo:");
+                                    codigo = l.nextInt();
+                                    System.out.println("Ingrese el peso:");
+                                    peso=l.next();
+                                    System.out.println("Ingrese la edad:");
+                                    edad=l.nextInt();
+                                    System.out.println("Ingresela fecha de nacimiento:");
+                                    fechaN= new SimpleDateFormat("dd/MM/yyyy").parse(l.next());
+                                    System.out.println("Que clase de animales come  siendo este tambien depredador");
+                                    depredador=l.next();
+                                    System.out.println("Donde estan ubicada las cuevas de estos animales ");
+                                    cueva=l.next();
+                                    System.out.println("ingrese el tiempo que pude estar en la luz del dia");
+                                    tiempo=l.next();
+                                    System.out.println("Ingrese cual seria la forma de su cabeza");
+                                    fcabeza=l.next();
+                                    System.out.println("Ingrese donde puede  hacer sus nidos ");
+                                    aujeros=l.next();
+                                    objeto = new Lechuza(nombre, aujeros, aujeros, cueva, depredador, codigo, peso, nombre, fechaN, edad);
+                                    objeto.setCodigo(cod3);
+                                    controladorlechuza.update(objeto);
+                                    
                                 } else {
-                                    System.out.println("El preadolescente no existe");
+                                    System.out.println("La lechuza  no existe");
                                 }
                                 break;
                             case 4:
-                                System.out.println("Ingrese el codigo del adolescente que va a eliminar");
-                                codigo2 = escaner.nextInt();
-                                controladorPreadolescente.delete(codigo2);
+                                System.out.println("Ingrese el codigo la lechuza que va a eliminar");
+                                cod3 = l.nextInt();
+                                controladorlechuza.delete(cod3);
                                 break;
                             case 5:
-                                controladorPreadolescente.imprimir();
+                                controladorlechuza.imprimir();
                                 break;
                             case 6:
-                                repetirPreadolescente = false;
+                                replechuza = false;
                                 break;
                         }
-                    } while (repetirPreadolescente);
+                    } while (replechuza);
 
                     break;
                 case 5:
