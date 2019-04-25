@@ -215,9 +215,9 @@ public class Principal {
                                 nada=l.next();
                                 System.out.println("Ingrese el nombre donde esta ubicado el estanque de agua");
                                 estanque=l.next();
+                                objeto = new Pato(nada, estanque, cautiverio, dueño, veterinario, medicamento, codigo, peso, nombre, fechaN, edad);
+                                objeto.setCodigo(cod1);
                                 
-                                    objeto = new Pato(nada, estanque, cautiverio, dueño, veterinario, medicamento, codigo, peso, nombre, fechaN, edad);
-                                    objeto.setCodigo(cod1);
                                     controladorpato.update(objeto);
                                 } else {
                                     System.out.println("El no profesional no existe");
@@ -251,80 +251,69 @@ public class Principal {
                         int opbuitre = l.nextInt();
                         switch (opbuitre) {
                             case 1:
-                                System.out.println("Ingrese un nombre:");
-                                String nombre = escaner.next();
-                                System.out.println("Ingrese si recibe leche materna");
-                                boolean lecheMaterna = escaner.nextBoolean();
-                                System.out.println("Ingrese si recive alimentacion artificial");
-                                boolean artificial = escaner.nextBoolean();
-                                System.out.println("Ingrese si recive alimentacion de reemplazo");
-                                boolean reemplazo = escaner.nextBoolean();
-                                System.out.println("Ingrese si recibe alimentacion complementaria:");
-                                boolean complemento = escaner.nextBoolean();
-                                System.out.println("Ingrese crecimiento de talla anual");
-                                int talla = escaner.nextInt();
-                                System.out.println("Es huerfano:");
-                                boolean huerfano = escaner.nextBoolean();
-                                System.out.println("Es vulnerable");
-                                boolean vulnerable = escaner.nextBoolean();
-                                System.out.println("Está en un orfanato:");
-                                boolean orfanato = escaner.nextBoolean();
-                                System.out.println("Fecha de nacimiento");
-                                Date miDate = new SimpleDateFormat("dd/MM/yyyy").parse(escaner.next());
-                                System.out.println("Sexo:");
-                                String sexo = escaner.next();
-                                System.out.println("Tipo de sangre:");
-                                String sangre = escaner.next();
-                                Lactante objeto = new Lactante(lecheMaterna, artificial, reemplazo, complemento, talla, huerfano, vulnerable, orfanato, nombre, miDate, sexo, sangre);
-                                controladorLactante.create(objeto);
+                                System.out.println("Ingrese el nombre:");
+                                String nombre = l.next();
+                                System.out.println("Ingrese el codigo:");
+                                int codigo = l.nextInt();
+                                System.out.println("Ingrese el peso:");
+                                String peso=l.next();
+                                System.out.println("Ingrese la edad:");
+                                int edad=l.nextInt();
+                                System.out.println("Ingresela fecha de nacimiento:");
+                                Date fechaN= new SimpleDateFormat("dd/MM/yyyy").parse(l.next());
+                                System.out.println("que clase de animales come  siendo este carnivoro");
+                                String Carnivoro=l.next();
+                                System.out.println("En que simbolo es represntado el buitre o conocidomo commo condor tambien");
+                                String simbolo=l.next();
+                                System.out.println("Donde estan ubicada las cuevas de estos animales ");
+                                String cueva=l.next();
+                                System.out.println("Es posible que coma a otros depredadores");
+                                String depredador=l.next();
+                                Buitre objeto= new Buitre(Carnivoro, simbolo, cueva, depredador, codigo, peso, nombre, fechaN, edad);
+                                controladorbuitre.create(objeto);
                                 break;
                             case 2:
                                 System.out.println("Ingrese el codigo del lactante");
-                                int codigo2 = escaner.nextInt();
-                                System.out.println(controladorLactante.read(codigo2));
+                                int cod2 = l.nextInt();
+                                System.out.println(controladorbuitre.read(cod2));
                                 break;
                             case 3:
                                 System.out.println("Ingrese el codigo del lactante");
-                                codigo2 = escaner.nextInt();
-                                if (controladorLactante.read(codigo2) != null) {
-                                    System.out.println("Ingrese un nombre:");
-                                    nombre = escaner.next();
-                                    System.out.println("Ingrese si recibe leche materna");
-                                    lecheMaterna = escaner.nextBoolean();
-                                    System.out.println("Ingrese si recive alimentacion artificial");
-                                    artificial = escaner.nextBoolean();
-                                    System.out.println("Ingrese si recive alimentacion de reemplazo");
-                                    reemplazo = escaner.nextBoolean();
-                                    System.out.println("Ingrese si recibe alimentacion complementaria:");
-                                    complemento = escaner.nextBoolean();
-                                    System.out.println("Ingrese crecimiento de talla anual");
-                                    talla = escaner.nextInt();
-                                    System.out.println("Es huerfano:");
-                                    huerfano = escaner.nextBoolean();
-                                    System.out.println("Es vulnerable");
-                                    vulnerable = escaner.nextBoolean();
-                                    System.out.println("Está en un orfanato:");
-                                    orfanato = escaner.nextBoolean();
-                                    System.out.println("Fecha de nacimiento");
-                                    miDate = new SimpleDateFormat("dd/MM/yyyy").parse(escaner.next());
-                                    System.out.println("Sexo:");
-                                    sexo = escaner.next();
-                                    System.out.println("Tipo de sangre:");
-                                    sangre = escaner.next();
-                                    objeto = new Lactante(lecheMaterna, artificial, reemplazo, complemento, talla, huerfano, vulnerable, orfanato, nombre, miDate, sexo, sangre);
-                                    objeto.setCodigo(codigo2);
-                                    controladorLactante.update(objeto);
+                                cod2 = l.nextInt();
+                                if (controladorbuitre.read(cod2) != null) {
+                                     System.out.println("Ingrese el nombre:");
+                                nombre = l.next();
+                                System.out.println("Ingrese el codigo:");
+                                codigo = l.nextInt();
+                                System.out.println("Ingrese el peso:");
+                                peso=l.next();
+                                System.out.println("Ingrese la edad:");
+                                edad=l.nextInt();
+                                System.out.println("Ingresela fecha de nacimiento:");
+                                fechaN= new SimpleDateFormat("dd/MM/yyyy").parse(l.next());
+                                System.out.println("que clase de animales come  siendo este carnivoro");
+                                Carnivoro=l.next();
+                                System.out.println("En que simbolo es represntado el buitre o conocidomo commo condor tambien");
+                                simbolo=l.next();
+                                System.out.println("Donde estan ubicada las cuevas de estos animales ");
+                                cueva=l.next();
+                                System.out.println("Es posible que coma a otros depredadores");
+                                depredador=l.next();
+                                 objeto = new Buitre(Carnivoro, simbolo, cueva, depredador, codigo, peso, nombre, fechaN, edad);
+                                 objeto.setCodigo(cod2);
+                                   
+                                    controladorbuitre.update(objeto);
                                 } else {
                                     System.out.println("El lactante no existe");
                                 }
                                 break;
                             case 4:
                                 System.out.println("Ingrese el codigo del lactante que va a eliminar");
-                                codigo2 = escaner.nextInt();
-                                controladorLactante.delete(codigo2);
+                                cod2 = l.nextInt();
+                                controladorbuitre.delete(cod2);
                                 break;
                             case 5:
-                                controladorLactante.imprimir();
+                                controladorbuitre.imprimir();
                                 break;
                             case 6:
                                 repbuitre = false;
